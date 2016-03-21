@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Meetup API</title>
+    <link rel="stylesheet" href="style.css" media="screen" title="no title" charset="utf-8">
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js" charset="utf-8"></script>
+    <script src="main.js" charset="utf-8"></script>
+    <script src="apikey.js" charset="utf-8"></script>
+  </head>
+  <body>
+
+    <div id="wrapper">
+      <div class="gradient">
+
+        <header>
+          <div class="meetupLogo">
+            <img src="http://engage.momentum.org/blog/wp-content/uploads/2014/09/meetup_logo_1.png">
+          </div>
+        </header>
+
+          <div class="input">
+
+            <h1>Let's Meetup, Ya Bish</h1>
+            <br>
+            <select class="topicDropdown">
+              <option id="beer" value="beer">Craft Beer Meetup</option>
+              <option id="photo" value="photo">Photography Meetup</option>
+              <option id="music" value="music">Musician Meetup</option>
+            </select>
+
+            <input type="text" id="userInput" value="" placeholder="Enter ZIP code ya bish">
+            <button type="button" id='submit-btn' name="button">Submit</button>
+
+          </div>
+        </div>
+
+    <div class="content-placeholder">
+      <div id="name-container"></div>
+      <script id="name-template" type="text/x-handlebars-template">
+        <br>
+          <h2>Events:</h2>
+          <br>
+            {{#each results}}
+            <p id=nameResults>{{name}}</p>
+            <p><a href={{event_url}} target="_blank">Let's meet up!</a></p>
+            <br>
+            <p id="venueTitle"><b>Venue:</b></p>
+            <p>{{venue.name}}</p>
+            <p>Address: {{venue.address_1}}</p>
+            <p>{{venue.city}} {{venue.state}}</p>
+            <br>
+          {{/each}}
+
+      </script>
+
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"></script>
+    </div>
+    </div>
+  </body>
+</html>
