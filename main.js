@@ -12,15 +12,15 @@ window.onload = function(){
     // /2/open_events?key=1153924241c41273b2d4b4f235e1d13&sign=true&zip=11206&topic=beer&time=,1w
 
     if (topic.value === "beer") {
-      var query = 'https://api.meetup.com/2/open_events?key=' + apikey +'&sign=true&zip=' + userInput.value + '&topic=beer&time=,1w';
+      var query = 'https://api.meetup.com/2/open_events?key=' + apiKey +'&sign=true&zip=' + userInput.value + '&topic=beer&time=,1w';
       console.log('beer dawg');
 
     } if (topic.value === "photo") {
-        var query = 'https://api.meetup.com/2/open_events?key=' + apikey +'&sign=true&zip=' + userInput.value + '&topic=photo&time=,1w';
+        var query = 'https://api.meetup.com/2/open_events?key=' + apiKey +'&sign=true&zip=' + userInput.value + '&topic=photo&time=,1w';
         console.log('photo dawg');
 
     } if (topic.value === "music") {
-        var query = 'https://api.meetup.com/2/open_events?key=' + apikey +'&sign=true&zip=' + userInput.value + '&topic=music&time=,1w';
+        var query = 'https://api.meetup.com/2/open_events?key=' + apiKey +'&sign=true&zip=' + userInput.value + '&topic=music&time=,1w';
         console.log('music dawg');
 
 }
